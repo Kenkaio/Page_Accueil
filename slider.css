@@ -1,0 +1,68 @@
+#slideshow{
+	overflow: hidden;
+}
+
+.slider-list{
+	width: 100%;
+	overflow: hidden;
+}
+
+.slider-list figure{
+	position: relative;
+	width: 200%;
+	margin: 0;
+	padding: 0;
+	animation: 30s slider infinite;
+}
+
+
+.slider-list figure img{
+	width: 50%;
+	height: auto;
+	float: left;
+}
+
+/*Création animation*/
+
+@keyframes slider{
+	0%{
+		left:0%;
+	}
+	35%{
+		left:0%;
+	}
+	50%{
+		left:-100%;
+	}
+	85%{
+		left: -100%;
+	}
+	100%{
+		left:0%;
+	}
+}
+
+#timeline {
+	position: absolute;
+	background: #999;
+	bottom: 0;
+	height: 5px;
+	background: rgb(92,173,211);
+	background: rgba(92,173,211,.8);
+	width: 0;
+	/* fonction d'animation */
+	animation: timeliner 30s infinite;
+}
+
+
+@keyframes timeliner {
+	0%, 36%, 50%, 86%, 100%	{ width: 0;		}
+	35%, 85%		{ width: 100%;}
+}
+
+
+
+
+
+
+

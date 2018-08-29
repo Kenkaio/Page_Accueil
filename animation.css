@@ -1,0 +1,164 @@
+.play_commands {
+	/* positionnement en haut à droite */ 
+	position: absolute;
+	top: 125px; right: 25px;
+	z-index: 10;
+	/* dimensionnement des icônes */
+	width: 22px;
+	height: 22px;
+	text-indent: -9999px;
+	border:0 none;
+	/* placez l'opacité à 1 si vous souhaitez voir les commandes */
+	opacity: 0;
+	/* préparation de transition sur opacicty et right */
+	transition: opacity 1s;
+}
+/* on décale play légèrement sur la gauche */
+.play { right: 0; z-index: 10; cursor: default; }
+ 
+/* création de l'icône pause avec 2 pseudos éléments */
+.pause:after,
+.pause:before {
+	position: absolute;
+	display: block;
+	content: " ";
+	top:0;
+	width:38%;
+	height: 22px;
+	background: #fff;
+	background: rgba(255,255,255,0.5);
+}
+.pause:after { right:0; }
+.pause:before {	left:0; }
+ 
+/* création de l'icône play avec des bordures */
+.play {
+	width: 1px; 
+	height: 1px; 
+	/* les transparentes forment la flèche */
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 20px solid #fff; 
+	border-left: 20px solid rgba(255,255,255,0.5); 
+	/* renseignez 1 pour voir l'icône de suite */
+	opacity: 0;
+}
+ 
+/* apparition du bouton pause au survole */
+/* apparition des boutons au focus */
+#slideshow:hover .pause, 
+.play_commands:focus {
+	opacity: 1;
+	outline: none;
+}
+
+/* stopper les animation */
+.command:target ~ #slideshow .slider-list figure,
+.command:target ~ #slideshow #timeline, 
+.command:target ~ #slideshow .dots_commands li:first-child a:after{
+	animation-play-state: paused;
+}
+ 
+/* redémarrer les animations */
+#play:target ~ #slideshow .slider-list figure,
+#play:target ~ #slideshow #timeline,
+#play:target ~ #slideshow .dots_commands li:first-child a:after {
+	animation-play-state: running;
+}
+ 
+/* switch entre les boutons */
+.command:target ~ #slideshow .pause 		{ opacity:0; }
+#play:target ~ #slideshow:hover .pause,
+#play:target ~ #slideshow .pause:focus 	{ opacity:1; }
+.command:target ~ #slideshow .play 		{ opacity:1; right: 25px; cursor: pointer; }
+#play:target ~ #slideshow .play 			{ opacity:0; right: 55px; cursor: default; }
+
+
+/* Boutons */
+
+#slideshow .prev{
+	position: absolute;
+	z-index: 11;
+	top: 45%;
+	height:4rem;
+	width:2rem;
+	padding-top: 30px;
+	padding-left: 70px;
+	border-bottom:0;
+	color: white;
+	text-decoration:none;
+	background-color: rgba(0,0,0,0.3);
+	border-radius: 50%;
+	font-size: 1.8em;
+	font-family: Times-new-Roman;
+}
+
+#slideshow .next {
+	position: absolute;
+	z-index: 11;
+	top: 45%;
+	height:4rem;
+	width:4rem;
+	padding-top: 30px;
+	padding-left: 16px;
+	border-bottom:0;
+	color: white;
+	text-decoration:none;
+	background-color: rgba(0,0,0,0.3);
+	border-radius: 50%;
+	font-size: 1.8em;
+	font-family: Times-new-Roman;
+}
+ 
+#slideshow .prev { left: -60px; }
+#slideshow .next { right: -40px; }
+ 
+#slideshow .commands { display:none; }
+#slideshow .commands1 {	display: block; }
+
+.c_slider {
+	position: absolute;
+	left:0;
+	width: 200%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: url(images/bg1.jpg) 0 0 no-repeat,
+	            url(images/bg2.jpg) 100% 0 no-repeat;
+	background-size: 50%;
+	transition: background 3s;	
+	overflow-x: hidden;
+}
+
+/* on cache le slider */
+.i:target ~ #slideshow .slider-list									{ visibility: hidden }
+ 
+/* lorsque on cible le premier slider */
+/* on cache tous les "précédent" et "suivant" */
+#i1:target ~ #slideshow .commands								{ display: none; }
+/* on affiche seulement deux flèches */
+#i1:target ~ #slideshow .commands1								{ display: block; }
+/* correspond au décalage des images */
+#i1:target ~ #slideshow .c_slider								{ background-position: 0 0, 100% 0; }
+ 
+/* même procédé lorsqu'on cible le second slide */
+#i2:target ~ #slideshow .commands								{ display: none; }
+#i2:target ~ #slideshow .commands2								{ display: block; }
+#i2:target ~ #slideshow .c_slider								{ background-position: -100% 0, 0 0}
+
+@media (max-width: 1150px)
+{
+	.c_slider {
+	position: absolute;
+	left:0; top:0;
+	width: 2300px;
+	margin : 0;
+	padding: 0;
+	background: url(images/bg1.jpg) 0 0 no-repeat,
+	            url(images/bg2.jpg) 100% 0 no-repeat;
+	background-size: 50%;
+	transition: background 3s;	
+	overflow-x: hidden;	
+	}
+}
+

@@ -1,0 +1,185 @@
+#Projets{
+	position: relative;
+	text-align: center;
+	height: 850px;
+	padding-top: 100px;
+}
+
+#Projets h2{
+	font-size: 2.5em;
+	font-family: Roboto-Black;
+}
+
+#Projets p{
+	max-width: 600px;
+	min-width: 100px;
+	padding-left: 50px;
+	padding-right: 50px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+
+
+#MenuPortfolio{
+	margin-bottom: 30px;
+	list-style-type: none;
+	width: 356px;
+	height: 40px;
+	background-color: rgb(220, 220, 220);
+	border-radius: 4px;
+	margin: 0 auto;
+}
+
+#MenuPortfolio a {
+	float: left;
+	width: 89px;
+	line-height: 40px;
+ 	text-align: center;
+	position: relative;
+	display: block;
+	text-decoration: none;
+	color: rgb(100, 104, 109);
+	font-weight: bold;
+}
+
+#MenuPortfolio a:first-child :hover {
+	border-radius: 4px 0 0 4px;
+}
+
+#MenuPortfolio a:last-child :hover {
+	border-radius: 0 4px 4px 0;
+}
+
+#MenuPortfolio a:target{
+	background-color: #5cadd3;
+	border-bottom: 3px solid #468cad;
+	color: white !important;
+}
+
+#MenuPortfolio a ::after, #MenuPortfolio a:target::after{
+	content: '';
+	position: absolute;
+    display: none;
+	top: 43px;
+	left: 50%;
+	height: 0;
+	width: 0;
+	border: solid transparent;
+	pointer-events: none;
+	border-color: rgba(92, 173, 211, 0);
+	border-top-color: #5cadd3;
+	border-width: 10px;
+	margin-left: -10px;
+}
+
+#MenuPortfolio a:target::after,
+#MenuPortfolio a :hover::after {
+  display: block;
+}
+
+#Creative{
+	position: absolute;
+	width: 1400px;
+	left: 150px;
+	margin-top: 80px;
+	margin-bottom: 100px;
+}
+
+#AllWorks{
+	position: absolute;
+	width: 1400px;
+	left: 150px;
+	margin-top: 80px;
+	margin-bottom: 100px;
+}
+
+#AllWorks img , #Creative img{
+	width: 300px;
+	height: 200px;
+}
+
+#Crea:target ~ #Creative{
+	display:block;
+	z-index: 14;
+}
+
+#MenuPortfolio .Portfolio_item{
+	position: relative;
+	display: inline-block;
+	padding: 0;
+	margin: 15px;
+	width: 310px;
+	height: 210px;
+}
+
+#MenuPortfolio .Portfolio_item:hover .Portfolio{
+	opacity: 0.8;
+	transition-duration: 1.5s;
+}
+
+#MenuPortfolio .Portfolio{
+	position:absolute;
+	left:0; 
+	bottom: 4px;
+	width: 290px;
+	height: 60px;
+	margin-left: 5px;
+	margin-bottom: 6px;
+	padding-left: 10px;
+	text-align: left;
+	font-family: Georgia, Times, serif;
+	background: rgba(20,20,20,0.5);
+	color: white;
+	opacity: 0;
+}
+
+
+
+#MenuPortfolio a:target{
+  color: white;
+}
+
+
+.far.fa-eye {
+    display: block;
+    align-content: center;
+    float: left;
+    position: absolute;
+    right: 15px;
+    bottom: 45px;
+    padding: 15px;
+    border-radius: 45px;
+    border: solid 2px;
+    border-color: white;
+    color: white;
+    background-color: rgb(92, 173, 211);
+}
+
+
+@media (max-width: 1150px){
+	#Creative{
+		position: absolute;
+		width: 320px;
+		left: auto;
+		margin-top: 80px;
+		margin-bottom: 100px;
+		display: none;
+	}
+
+	#AllWorks{
+		position: absolute;
+		width: 320px;
+		left: auto;
+		margin-top: 80px;
+		margin-bottom: 100px;
+	}
+
+	#Projets{
+		position: relative;
+		text-align: center;
+		margin-top: 100px;
+		height: 2200px;
+	}
+}

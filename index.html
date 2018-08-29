@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="Index.css" />
+	<link rel="stylesheet" href="slider.css" />
+	<link rel="stylesheet" href="animation.css" />
+	<link rel="stylesheet" href="Services.css" />
+	<link rel="stylesheet" href="Projets.css" />
+	<link rel="stylesheet" href="Contacts.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<title>Web Agency</title>
+</head>
+<body>
+	<header>
+		<div id="logo">
+			<img src="Images/logo.png" alt="logo">		
+		</div>
+		<a id="lienMenu" href="#BarNav">Menu</a>		
+		<div id="BarNav">			
+			<nav>					
+				<ul>									
+					<li><a href="#slideshow">Accueil</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#Projets">Portfolio</a></li>
+					<li><a href="#Contacts">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+<div id="container">
+	<span id="play" class="command"></span>
+	<span id="pause" class="command"></span>
+
+	<span id="i1" class="command i"></span>
+	<span id="i2" class="command i"></span>
+
+	<section id="slideshow">
+		<div class="c_slider"></div>
+
+		<a class="play_commands pause" href="#pause" title="Maintain paused">Pause</a>
+		<a class="play_commands play" href="#play" title="Play the animation">Play</a>
+
+		<a class="commands prev commands1" href="#i2" title="Aller à la 2ème slide">&lt;</a>
+		<a class="commands next commands1" href="#i2" title="Aller à la 2ème slide">&gt;</a>
+		<a class="commands prev commands2" href="#i1" title="Aller à la 1ère slide">&lt;</a>
+		<a class="commands next commands2" href="#i1" title="Aller à la 1ère slide">&gt;</a>
+
+		<div class="slider-list">
+			<figure>
+				<img src="Images/bg1.jpg" alt="bg1" id="bg1">
+				<img src="Images/bg2.jpg" alt="bg2" id="bg2">
+			</figure>
+		</div>		
+
+		<div class="text-block">
+			<h1><strong>WEBAGENCY</strong> : L'AGENCE DE TOUS VOS PROJETS !</h1>
+			<p>Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
+
+			<button class="infos">Plus d'infos</button>
+		</div>
+		<span id="timeline"></span>				
+	</section>
+
+	<section class="SlideshowLow">	
+		<div class="slider-listLow">
+			<figure>
+				<img src="Images/bg1.jpg" alt="bg1" id="bg1Low">
+			</figure>
+		</div>	
+		<div class="text-block_MQ">
+			<h1>L'AGENCE DE TOUS VOS PROJETS !</h1>
+			<p>Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
+
+			<button class="infosLow">Plus d'infos</button>
+		</div>
+	</section>
+
+	<section id="services">
+		<h2>NOS SERVICES</h2>
+		<div class="separator">
+			<div class="cercle"></div>
+			<div class="feature"></div>
+		</div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipsicing elit, sed do eiusmod tempor incididunt ut et dolore magna aliqua.
+		Ut enim ad minim veniam</p>
+
+		<div id="SecondService">
+			<img src="Images/main-feature.png" alt="main-feature" id="imgGraph">
+			<div id="context">
+				<div id="UXdesign">
+					<div class="graph">
+						<img src="Images/graph.png" alt="graph">
+						<div class="Rond"></div>
+						<div class="Point"></div>
+					</div>
+					<h1>UX design</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna incididunt ut labore aliqua.</p>
+				</div>
+				<div id="UIdesign">
+					<div class="graph">
+						<img src="Images/cubes.png" alt="graph">
+						<div class="Rond"></div>
+						<div class="Point"></div>
+					</div>
+					<h1>UI design</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna incididunt ut labore aliqua.</p>
+				</div>
+				<div id="SEO">
+					<div class="graph">
+						<img src="Images/cercle.png" alt="graph">
+						<div class="Rond"></div>
+						<div class="Point"></div>
+					</div>
+					<h1>SEO</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna incididunt ut labore aliqua.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="Projets">
+		<h2>NOS PROJETS</h2>
+		<div class="separator">
+			<div class="cercle"></div>
+			<div class="feature"></div>
+		</div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipsicing elit, sed do eiusmod tempor incididunt ut et dolore magna aliqua.
+		Ut enim ad minim veniam</p>
+
+		<div id="MenuPortfolio">
+				<a id="AW" href="#AW">All Works</a>
+				<div id="AllWorks">
+					<figure class="Portfolio_item">						
+						<img src="Images/01.jpg">
+							<figcaption class="Portfolio">
+								<strong>Portfolio item 1</strong><br /> Lorem Ipsum Dolor Sit
+								<i class="far fa-eye"></i>
+							</figcaption>
+					</figure>
+					<figure class="Portfolio_item">							
+						<img src="Images/02.jpg">
+							<figcaption class="Portfolio">
+								<strong>Portfolio item 2</strong><br /> Lorem Ipsum Dolor Sit
+								<i class="far fa-eye"></i>
+							</figcaption>
+					</figure>
+					<figure class="Portfolio_item">
+						<img src="Images/03.jpg">
+							<figcaption class="Portfolio">
+								<strong>Portfolio item 3</strong><br /> Lorem Ipsum Dolor Sit
+								<i class="far fa-eye"></i>
+							</figcaption>
+					</figure>
+					<figure class="Portfolio_item">
+						<img src="Images/04.jpg">
+							<figcaption class="Portfolio">
+								<strong>Portfolio item 4</strong><br /> Lorem Ipsum Dolor Sit
+								<i class="far fa-eye"></i>
+							</figcaption>
+					</figure>
+					<figure class="Portfolio_item">
+						<img src="Images/05.jpg">
+							<figcaption class="Portfolio">
+								<strong>Portfolio item 5</strong><br /> Lorem Ipsum Dolor Sit
+								<i class="far fa-eye"></i>
+							</figcaption>
+					</figure>
+					<figure class="Portfolio_item">
+						<img src="Images/06.jpg">
+							<figcaption class="Portfolio">
+								<strong>Portfolio item 6</strong> <br />Lorem Ipsum Dolor Sit
+								<i class="far fa-eye"></i>
+							</figcaption>
+					</figure>						
+
+					<figure class="Portfolio_item">
+						<img src="Images/07.jpg">
+							<figcaption class="Portfolio">
+								<strong>Portfolio item 7</strong><br /> Lorem Ipsum Dolor Sit
+								<i class="far fa-eye"></i>
+							</figcaption>
+					</figure>
+					<figure class="Portfolio_item">
+						<img src="Images/08.jpg">
+							<figcaption class="Portfolio">
+								<strong>Portfolio item 8</strong><br /> Lorem Ipsum Dolor Sit
+								<i class="far fa-eye"></i>
+							</figcaption>
+					</figure>
+				</div>		
+
+			    <a id="Crea" href="#Crea">Creative</a>
+		  		<div id="Creative">
+					<figure class="Portfolio_item">						
+						<img src="Images/02.jpg">
+							<figcaption class="Portfolio">
+								<strong>Portfolio item 2</strong><br /> Lorem Ipsum Dolor Sit
+								<i class="far fa-eye"></i>
+							</figcaption>
+					</figure>
+					<figure class="Portfolio_item">
+						<img src="Images/04.jpg">
+							<figcaption class="Portfolio">
+								<strong>Portfolio item 4</strong><br /> Lorem Ipsum Dolor Sit
+								<i class="far fa-eye"></i>
+							</figcaption>
+					</figure>
+					<figure class="Portfolio_item">
+						<img src="Images/06.jpg">
+							<figcaption class="Portfolio">
+								<strong>Portfolio item 6</strong><br /> Lorem Ipsum Dolor Sit
+								<i class="far fa-eye"></i>
+							</figcaption>
+					</figure>
+					<figure class="Portfolio_item">
+						<img src="Images/08.jpg">
+							<figcaption class="Portfolio">
+								<strong>Portfolio item 8</strong><br /> Lorem Ipsum Dolor Sit
+								<i class="far fa-eye"></i>
+							</figcaption>
+					</figure>
+					<figure class="Portfolio_item">
+						<img src="Images/01.jpg">
+							<figcaption class="Portfolio">
+								<strong>Portfolio item 1</strong><br /> Lorem Ipsum Dolor Sit
+								<i class="far fa-eye"></i>
+							</figcaption>
+					</figure>
+					<figure class="Portfolio_item">
+						<img src="Images/03.jpg">
+							<figcaption class="Portfolio">
+								<strong>Portfolio item 3</strong><br /> Lorem Ipsum Dolor Sit
+								<i class="far fa-eye"></i>
+							</figcaption>
+					</figure>						
+
+					<figure class="Portfolio_item">
+						<img src="Images/05.jpg">
+							<figcaption class="Portfolio">
+								<strong>Portfolio item 5</strong><br /> Lorem Ipsum Dolor Sit
+								<i class="far fa-eye"></i>
+							</figcaption>
+					</figure>
+					<figure class="Portfolio_item">
+						<img src="Images/07.jpg">
+							<figcaption class="Portfolio">
+								<strong>Portfolio item 7</strong><br /> Lorem Ipsum Dolor Sit
+								<i class="far fa-eye"></i>
+							</figcaption>
+					</figure>
+				</div>		
+			    <a id="Corp" href="#Corp">Corporate</a>
+			    <a id="Port" href="#Port">Portfolio</a>
+		</div>
+	</section>
+
+	<section id="Contacts">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2214246080457!2d2.3476369159239407!3d48.873055307627745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145ccb3091%3A0x9495beee8c96ec27!2s25+Rue+d&#39;Hauteville%2C+75010+Paris!5e0!3m2!1sfr!2sfr!4v1535029282198" allowfullscreen></iframe>
+
+		<div class="Contact_Info">
+			<h1>Contact Info</h1>
+  			<p><strong>WebAgency SAS</strong><br />25 Rue d'Hauteville 75010 Paris <br /> Tel : 01 02 03 04 05</p>
+			<form method="post" action="#">
+				<label for="Name" ></label><input type="text" name="Name" value="Name" id="Name" />
+				<label for="Email" ></label><input type="text" name="Email" value="Email" id="Email"/>
+				<label for="Subject" ></label><input type="text" name="Subject" value="Subject" id="Subject"/>
+				<textarea name="Message" rows="10" cols="100">Message</textarea>			
+ 			 	<input type="submit" value="Send Message" id="Valider"><br />
+			</form>
+		</div>
+	</section>
+</div>
+</body>
+</html>

@@ -1,0 +1,298 @@
+@font-face {
+	font-family: 'Roboto-Black';
+	src: url('fonts/Roboto-Black.ttf');
+}
+
+@font-face {
+	font-family: 'Roboto-Medium';
+	src: url('fonts/Roboto-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'Awesome';
+	src: url('fonts/FontAwesome.otf');
+}
+
+@font-face {
+	font-family: 'Regular';
+	src: url('fonts/Roboto-Regular.ttf');
+}
+
+
+body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background-color: rgb(253, 253, 253);
+}
+
+#logo{
+	position: fixed;
+	top: 5px;
+	left: 50px;
+	z-index: 17;	
+}
+
+#lienMenu{
+	display: none;
+}
+
+.SlideshowLow{
+	display: none;
+}
+
+#slideshow{
+	display: block;
+	position : relative;
+	width : 100%;
+	font-family: Roboto-Black;
+	vertical-align: middle;	
+	height: calc(100% + 100px);
+	padding-top: 100px;
+}
+
+.text-block{
+	position: absolute;
+	top : 30%;
+	left : 10%;
+	width : 650px;
+
+}
+
+.text-block h1 strong{
+	color : rgb(92, 173, 211);
+}
+
+.text-block h1{
+	color: white;
+	font-size: 2.5em;
+	margin-bottom: 0px;
+}
+
+.text-block p{
+	font-family: Awesome;
+	color: white;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+.infos{
+	background-color: rgb(92, 173, 211);
+	width: 140px;
+	height: 50px;
+	font-size: 1.3em;
+	font-family: Roboto-Medium;
+	color: white;
+	border: none;
+	border-bottom: 5px rgb(68,148,187) ridge;
+	border-radius: 4px;
+	margin-top: 30px;
+	margin-left: 45px;
+}
+
+#BarNav{
+	display: flex;
+	position: fixed;
+	z-index: 16;
+	width: 100%;
+	background-color: white;
+}
+
+header{
+	position: absolute;
+	display: flex;
+	width: 100%;
+	z-index: 16;
+	height : 100px;
+}
+
+header nav{
+	height: 100px;
+}
+
+header nav ul{
+	position: absolute;
+	display: flex;	
+	list-style-type: none;
+	right: 15%;
+	margin-top: 0px;
+}
+
+header nav ul a{	
+	display: block;
+	height: 60px;
+	text-decoration: none;
+	color: black;
+	padding-top: 40px;
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 1.1em;
+	font-family: Times-new-Roman;
+}
+
+header nav ul a:hover{
+	border-top: 4px solid;
+	border-color: rgb(92, 173, 211);
+	padding-top: 35px;
+	font-family: Times-new-Roman;
+	font-size: 1.2em;
+}
+
+#services:target, #Projets:target{
+	transition: 2s;
+}
+
+@media (max-width: 1150px)
+{
+	#slideshow{
+		display: none;
+	}
+
+	.SlideshowLow{
+		display: flex;
+		flex-direction: column;
+		height: 500px;
+		padding-top: 100px;
+	}
+
+	.slider-listLow{
+		position: relative;
+		width: 100%;
+	}
+
+	.slider-listLow figure{
+		position: relative;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	.slider-listLow figure img{
+		width: 100%;
+		height: auto;
+		float: left;
+	}
+
+	.text-block_MQ{
+		position: relative;
+		margin: auto;
+		padding: 5px;
+		text-align: center;
+	}
+
+	.text-block_MQ h1{
+		color: black;
+		font-size: 2.5em;
+		margin-bottom: 0px;
+	}
+
+	.text-block_MQ p{
+		font-family: Awesome;
+		color: black;
+		font-weight: bold;
+		font-size: 1em;
+	}
+
+	#logo{
+		position: fixed;
+		top: 30px;
+		left: 20px;
+		z-index: 17;	
+	}
+
+	#logo img{
+		width: 200px;
+	}
+	#lienMenu{
+		text-decoration: none;
+		color: black;
+		font-size: 1.5em;
+		position: fixed;
+		display: block;
+		right: 100px;
+		top: 40px;
+		z-index: 17;
+	}
+
+	#BarNav ul{
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		list-style-type: none;
+		margin-top: 100px;
+		width: 90px;
+		padding-left: 0;
+		background-color: rgb(250, 247, 239);
+	}
+
+	#BarNav ul li a{
+		display: block;
+		height: 30px;
+		text-decoration: none;
+		color: black;
+		padding-top: 10px;
+		padding-right: 5px;
+		font-size: 1.1em;
+		font-family: Times-new-Roman;
+	}
+
+	#BarNav ul li a:hover{
+		border: none;
+		background-color: rgb(231, 211, 175);
+		font-family: Times-new-Roman;
+		font-size: 1.2em;
+	}
+
+
+	#BarNav{
+		display: flex;
+		position: fixed;
+		z-index: 16;
+		background-color: rgb(250, 247, 239);
+	}
+
+	header{
+		display: flex;
+		position: fixed;
+		width: 100%;
+		z-index: 16;
+		height : 100px;
+		background-color: rgb(250, 247, 239);
+		padding-top: 0;
+	}
+
+	#BarNav{	
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 0s, opacity 1s linear;
+	}
+
+	#BarNav:target{
+		opacity: 0.9;
+		visibility: visible;
+	}
+
+}
+
+
+@media (min-width:1150px) 
+{			
+    .text-block_MQ{
+    	position: absolute;
+		top : 5%;
+		left : 10%;
+		width : 400px;	
+		margin-bottom: 0px;
+		display: none;
+    }
+
+    #logo{
+		margin-top: 20px;
+		margin-left: 150px;
+	}
+}	
+
+
+@media (max-width:768px) 
+{	
+}	
